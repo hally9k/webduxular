@@ -1,2 +1,2 @@
 # webduxular
-A boilerplate for an Angular 1.5 app with es2015, Redux, Webpack, Babel, UI Router and Kendo UI.
+A boilerplate project for AngularJS 1.5, Webpack, es2015, Babel, Redux with Bootstrap & Kendo UI.
