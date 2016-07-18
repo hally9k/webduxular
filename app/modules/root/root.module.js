@@ -1,14 +1,24 @@
+
+import actions from '../../actions';
+
 import './root.module.css';
 import rootModuleTemplate from './root.module.html';
 
 class RootModuleController {
-  constructor($scope) {
+  constructor($ngRedux, $scope) {
 
-    $scope.color = 'blue';
-
-    $scope.changeColor = (newColor) => {
-      $scope.color = newColor;
+    function mapStateToParams(state) {
+        return {
+          state: state
+        };
     }
+
+    let disconnect = $ngRedux.connect(
+        mapStateToParams,
+        actions.color
+    )(this);
+
+    $scope.$on('$destroy', disconnect);
 
   }
 }

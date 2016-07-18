@@ -16,7 +16,11 @@
     "css-loader": "0.23.1",
     "html-loader": "0.4.3",
     "html-webpack-plugin": "2.19.0",
+    "immutable": "^3.8.1",
+    "ng-redux": "3.3.5-beta.1",
     "path": "0.12.7",
+    "redux": "3.5.2",
+    "redux-logger": "^2.6.1",
     "rimraf": "2.5.3",
     "style-loader": "0.13.1",
     "webpack": "2.1.0-beta.13"
