@@ -8,5 +8,5 @@ export default
     collapsed: true
   });
   $ngReduxProvider
-    .createStoreWith(reducers, [logger]);
+    .createStoreWith(reducers, ['ngUiRouterMiddleware', logger]);
 }

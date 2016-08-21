@@ -1,9 +1,7 @@
 
-import rootModuleTemplate from './root.module.html';
-
 import actions from '../../actions';
 
-class RootModuleController {
+export default class ColorRouteController{
   constructor($ngRedux, $scope) {
 
     function mapStateToParams(state) {
@@ -14,18 +12,14 @@ class RootModuleController {
 
     let disconnect = $ngRedux.connect(
         mapStateToParams,
-        actions.chart
-    )(this);
+        actions.router
+    )($scope);
 
     $scope.$on('$destroy', disconnect);
 
+    $scope.changeColorHandler = function(newColor) {
+      $scope.stateTransitionTo('root.color', { color: newColor });
+    }
+
   }
 }
-
-export default
-angular.module('webduxular.modules.root', [])
-.component('root', {
-  template: rootModuleTemplate,
-  controller: RootModuleController
-})
-.name;

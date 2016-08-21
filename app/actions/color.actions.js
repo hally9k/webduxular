@@ -1,9 +1,10 @@
 
-function changeColor(newColor) {
+
+function changeColor(aColor) {
   return {
     type: 'CHANGE_COLOR',
     payload: {
-      color: newColor
+      color: aColor
     }
   }
 }

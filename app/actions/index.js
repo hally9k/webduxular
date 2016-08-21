@@ -1,6 +1,10 @@
 
-import color from './color/color.actions';
+import router from './router.actions';
+//import color from './color.actions';
+import chart from './chart.actions';
 
 export default {
-  color
+  router,
+  //color,
+  chart
 }

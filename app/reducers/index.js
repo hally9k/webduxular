@@ -1,7 +1,12 @@
 
-import color from './color/color.reducers';
+import router from './router.reducers';
+
+//import color from './color/color.reducers';
+import chart from './chart/chart.reducers';
 
 
 export default {
-  color
+  router,
+  //color,
+  chart
 }

@@ -1,9 +1,23 @@
-<div class="module">
-  <h1>Root Module</h1>
-  <div class="component-container">
-    <color
-      color="color"
-      change-color-handler="changeColor(newColor);"
-    ></color>
+<div class="container" >
+  <div class="row" style="padding-left: 20px;">
+    <a ui-sref="root">root</a>
+  </div>
+  <div class="row" style="padding-left: 20px;">
+    <a ui-sref="root.color">color</a>
+  </div>
+  <div class="row" style="padding-left: 20px;">
+    <a ng-click="$ctrl.toggleChart();">{{$ctrl.state.chart.showChart ? 'hide' : 'show';}} chart</a>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4">
+      <ui-view></ui-view>
+    </div>
+    <div class="col-lg-8 col-md-8">
+      <chart
+        ng-if="$ctrl.state.chart.showChart"
+        chart-options="$ctrl.state.chart.options"
+        randomize-data-handler="$ctrl.randomizeData();"
+      ></chart>
+    </div>
   </div>
 </div>
