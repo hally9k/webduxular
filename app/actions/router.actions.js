@@ -3,7 +3,7 @@ import {
     stateReload,
     stateTransitionTo
 }
-    from 'redux-ui-router';
+    from 'hally9k-redux-ui-router';
 
 export default {
     stateGo,

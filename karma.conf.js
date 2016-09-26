@@ -19,7 +19,7 @@ module.exports = function(config) {
     },
     webpack: webpackConfig,
     webpackMiddleware: {noInfo: true},
-    reporters: ['progress'/*, 'coverage'*/],
+    reporters: ['spec'/*, 'coverage'*/],
     // coverageReporters: [
     //   // { type: 'lcov', dir: 'coverage/', subdir: '.' },
     //   // { type: 'json', dir: 'coverage/', subdir: '.' },
