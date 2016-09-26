@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "start": "npm-run-all --parallel lint server:dev test:dev",
+    "start": "webpack-dashboard -- npm-run-all --parallel lint server:dev test:dev",
     "server:dev": "webpack-dev-server -d --devtool source-map --env.dev --content-base build/ --inline --hot",
     "server:prod": "webpack-dev-server --env.prod --content-base build/ --inline --hot",
     "lint": "eslint .",
@@ -78,6 +78,7 @@
     "uglify-loader": "^1.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.25",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^2.0.0-beta",
     "webpack-validator": "^2.2.7"
   }

@@ -3,6 +3,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = env => {
   return {
@@ -25,14 +26,16 @@ module.exports = env => {
     },
     plugins: [
 
-     new webpack.LoaderOptionsPlugin({
+      new DashboardPlugin(),
+
+      new webpack.LoaderOptionsPlugin({
        options: {
          eslint: {
            failOnWarning: false,
            failOnError: true
          }
        }
-     }),
+      }),
 
       new HtmlWebpackPlugin({
         filename: 'index.html',
